@@ -1,22 +1,22 @@
-# Pluggable
+# Pluggin
 
 A library for creating plugin systems.
 
 ## Installation
 
 ```shell
-npm install pluggable
+npm install pluggin
 ```
 
 OR
 
 ```shell
-yarn add pluggable
+yarn add pluggin
 ```
 
 ## Usage
 
-- The core type pluggable exports is the `Plugin<I, O>`. It represents a plugin which accepts an input of type `I` and produces an output of type `O`.
+- The core type pluggin exports is the `Plugin<I, O>`. It represents a plugin which accepts an input of type `I` and produces an output of type `O`.
 - There are 2 types of plugins, a **function style plugin** and a **class style plugin** represented by the `FunctionPlugin<I, O>` and `ClassPlugin<I, O>` types resepectively.
 - A function style plugin is really just a function which accepts a parameter of type `I` and returns a value of type `O`.
 - A class style plugin is represented by a class which has an `execute` method which takes in a parameter of type `I` and returns a value of type `O`
@@ -24,7 +24,7 @@ yarn add pluggable
 ## Example
 
 ```typescript
-import { Plugin, execute } from 'pluggable';
+import { Plugin, execute } from 'pluggin';
 
 const doublerPlugin: Plugin<number, number> = (input: number) => input * 2;
 const result = execute(doublerPlugin, 25); // result = 25
@@ -44,7 +44,7 @@ Combining plugins in series will cause them to be chained which means the type o
 #### Example
 
 ```typescript
-import { Plugin, series, execute } from 'pluggable';
+import { Plugin, series, execute } from 'pluggin';
 
 interface MathProblem {
   operand1: number;
@@ -97,7 +97,7 @@ Plugins can also be combined in parallel. The parallel plugins will have their o
 #### Example
 
 ```typescript
-import { Plugin, series, parallel, execute } from 'pluggable';
+import { Plugin, series, parallel, execute } from 'pluggin';
 
 interface MathQuestion {
   problem: MathProblem; // MathProblem interface from series section above.

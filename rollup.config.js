@@ -5,10 +5,12 @@ const outDir = 'dist';
 export default {
   input: 'src/index.ts',
   plugins: [typescript()],
-  output: [{
-    name: 'Pluggable',
-    dir: `${outDir}/umd`,
-    format: 'umd',
-    sourcemap: true
-  }],
-}
+  output: [
+    {
+      name: 'Pluggin',
+      dir: `${outDir}/umd`,
+      format: 'umd',
+      sourcemap: true,
+    },
+  ],
+};
