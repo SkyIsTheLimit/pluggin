@@ -1,4 +1,4 @@
-# Pluggin
+# Pluggin ![CI](https://github.com/SkyIsTheLimit/pluggin/workflows/CI/badge.svg)
 
 A library for creating plugin systems.
 
