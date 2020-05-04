@@ -1,0 +1,39 @@
+{
+  "name": "pluggable",
+  "version": "0.0.0",
+  "main": "dist/umd/index.js",
+  "types": "dist/@types/index.d.ts",
+  "esnext": "dist/esm/index.js",
+  "repository": "git@github.com:SkyIsTheLimit/pluggable.git",
+  "author": "Sandeep Prasad <s3g007@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf ./dist && rollup -c && tsc --outDir dist/esm --declaration true --declarationDir dist/@types",
+    "tsc:watch": "tsc --outDir dist/esm --declaration true --declarationDir dist/@types -w",
+    "rollup:watch": "rollup -c -w",
+    "dev": "run-p rollup:watch tsc:watch",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint src --ext .ts",
+    "preversion": "run-p lint test",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "prepublishOnly": "run-p build test"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^4.1.1",
+    "@types/jest": "^25.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
+    "jest": "^25.5.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.7.6",
+    "ts-jest": "^25.4.0",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  }
+}

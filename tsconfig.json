@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "ES2015",
+    "target": "ES5",
+    "strict": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "coverage", "tests"]
+}
