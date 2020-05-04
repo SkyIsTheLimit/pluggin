@@ -97,16 +97,14 @@ Plugins can also be combined in parallel. The parallel plugins will have their o
 #### Example
 
 ```typescript
-import { Plugin, series, parallel, execute } from 'pluggin';
+import { Plugin, ClassPlugin, series, parallel, execute } from 'pluggin';
 
 interface MathQuestion {
   problem: MathProblem; // MathProblem interface from series section above.
   result: number;
 }
 
-interface LoggerOutput {
-  messages: string[];
-}
+type LoggerOutput = Record<string, string>;
 
 // Class style plugin
 class Logger implements ClassPlugin<MathQuestion, LoggerOutput> {
