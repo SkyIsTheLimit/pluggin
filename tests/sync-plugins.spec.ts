@@ -1,4 +1,4 @@
-import { Plugin, ClassPlugin, execute, series, parallel } from '../src/index';
+import { Plugin, ClassPlugin, execute, series, parallel } from '../src';
 
 describe('Plugin Operations', () => {
   describe('Plugins without side-effects', () => {
