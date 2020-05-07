@@ -7,18 +7,18 @@
  * the input and output types of the plugin. The type defines the exact identity of a plugin
  * and where it can be used.
  */
-export type Plugin<Input, Output> = ClassPlugin<Input, Output> | FunctionPlugin<Input, Output>;
+export type Pluggin<Input, Output> = ClassPluggin<Input, Output> | FunctionPluggin<Input, Output>;
 
 /**
  * A function plugin is a unary function which takes in a single input and returns a
  * single output.
  */
-export type FunctionPlugin<Input, Output> = (input: Input) => Output;
+export type FunctionPluggin<Input, Output> = (input: Input) => Output;
 
 /**
  * A class type plugin is a class which implements an execute method
  */
-export type ClassPlugin<Input, Output> = {
+export type ClassPluggin<Input, Output> = {
   /**
    * The execute method of a plugin is responsible for either transforming the input that is
    * passed to it or returning an extracted value from the input.

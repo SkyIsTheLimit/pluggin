@@ -1,12 +1,12 @@
-import { Plugin, ClassPlugin, FunctionPlugin } from './index';
+import { Pluggin, ClassPluggin, FunctionPluggin } from './index';
 
 /**
  * A typeguard to indicate a plugin is a class style plugin.
  *
  * @param plugin The plugin to check.
  */
-export const isClassPlugin = <T, R>(plugin: Plugin<T, R>): plugin is ClassPlugin<T, R> => {
-  return (plugin as ClassPlugin<T, R>).execute !== undefined;
+export const isClassPluggin = <T, R>(plugin: Pluggin<T, R>): plugin is ClassPluggin<T, R> => {
+  return (plugin as ClassPluggin<T, R>).execute !== undefined;
 };
 
 /**
@@ -14,6 +14,6 @@ export const isClassPlugin = <T, R>(plugin: Plugin<T, R>): plugin is ClassPlugin
  *
  * @param plugin The plugin to check.
  */
-export const isFunctionPlugin = <T, R>(plugin: Plugin<T, R>): plugin is FunctionPlugin<T, R> => {
-  return (plugin as ClassPlugin<T, R>).execute === undefined;
+export const isFunctionPluggin = <T, R>(plugin: Pluggin<T, R>): plugin is FunctionPluggin<T, R> => {
+  return (plugin as ClassPluggin<T, R>).execute === undefined;
 };

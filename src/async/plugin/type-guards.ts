@@ -1,12 +1,12 @@
-import { AsyncPlugin, AsyncClassPlugin, AsyncFunctionPlugin } from './index';
+import { AsyncPluggin, AsyncClassPluggin, AsyncFunctionPluggin } from './index';
 
 /**
  * A typeguard to indicate a plugin is a class style plugin.
  *
  * @param plugin The plugin to check.
  */
-export const isAsyncClassPlugin = <T, R>(plugin: AsyncPlugin<T, R>): plugin is AsyncClassPlugin<T, R> => {
-  return (plugin as AsyncClassPlugin<T, R>).execute !== undefined;
+export const isAsyncClassPluggin = <T, R>(plugin: AsyncPluggin<T, R>): plugin is AsyncClassPluggin<T, R> => {
+  return (plugin as AsyncClassPluggin<T, R>).execute !== undefined;
 };
 
 /**
@@ -14,6 +14,6 @@ export const isAsyncClassPlugin = <T, R>(plugin: AsyncPlugin<T, R>): plugin is A
  *
  * @param plugin The plugin to check.
  */
-export const isAsyncFunctionPlugin = <T, R>(plugin: AsyncPlugin<T, R>): plugin is AsyncFunctionPlugin<T, R> => {
-  return (plugin as AsyncClassPlugin<T, R>).execute === undefined;
+export const isAsyncFunctionPluggin = <T, R>(plugin: AsyncPluggin<T, R>): plugin is AsyncFunctionPluggin<T, R> => {
+  return (plugin as AsyncClassPluggin<T, R>).execute === undefined;
 };

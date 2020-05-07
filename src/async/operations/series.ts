@@ -1,25 +1,25 @@
-import { AsyncPlugin } from './../plugin/index';
+import { AsyncPluggin } from './../plugin/index';
 import { execute } from './execute';
 
-export function series<I, A, O>(plugin1: AsyncPlugin<I, A>, plugin2: AsyncPlugin<A, O>): AsyncPlugin<I, O>;
+export function series<I, A, O>(plugin1: AsyncPluggin<I, A>, plugin2: AsyncPluggin<A, O>): AsyncPluggin<I, O>;
 export function series<I, A, B, O>(
-  plugin1: AsyncPlugin<I, A>,
-  plugin2: AsyncPlugin<A, B>,
-  plugin3: AsyncPlugin<B, O>,
-): AsyncPlugin<I, O>;
+  plugin1: AsyncPluggin<I, A>,
+  plugin2: AsyncPluggin<A, B>,
+  plugin3: AsyncPluggin<B, O>,
+): AsyncPluggin<I, O>;
 export function series<I, A, B, C, O>(
-  plugin1: AsyncPlugin<I, A>,
-  plugin2: AsyncPlugin<A, B>,
-  plugin3: AsyncPlugin<B, C>,
-  plugin4: AsyncPlugin<C, O>,
-): AsyncPlugin<I, O>;
+  plugin1: AsyncPluggin<I, A>,
+  plugin2: AsyncPluggin<A, B>,
+  plugin3: AsyncPluggin<B, C>,
+  plugin4: AsyncPluggin<C, O>,
+): AsyncPluggin<I, O>;
 export function series<I, A, B, C, D, O>(
-  plugin1: AsyncPlugin<I, A>,
-  plugin2: AsyncPlugin<A, B>,
-  plugin3: AsyncPlugin<B, C>,
-  plugin4: AsyncPlugin<C, D>,
-  ...plugins: AsyncPlugin<unknown, unknown>[]
-): AsyncPlugin<I, unknown>;
+  plugin1: AsyncPluggin<I, A>,
+  plugin2: AsyncPluggin<A, B>,
+  plugin3: AsyncPluggin<B, C>,
+  plugin4: AsyncPluggin<C, D>,
+  ...plugins: AsyncPluggin<unknown, unknown>[]
+): AsyncPluggin<I, unknown>;
 
 /**
  * Function to combine plugins in series. This function will chain the plugins passed to it which means the type of the output of
@@ -29,10 +29,10 @@ export function series<I, A, B, C, D, O>(
  * @param plugins The list of plugins to combine in series.
  */
 /* eslint-disable */
-export function series(...plugins: AsyncPlugin<any, any>[]): AsyncPlugin<any, any> {
-  function combineArray<I, O>(plugins: AsyncPlugin<any, any>[]): AsyncPlugin<I, O> {
+export function series(...plugins: AsyncPluggin<any, any>[]): AsyncPluggin<any, any> {
+  function combineArray<I, O>(plugins: AsyncPluggin<any, any>[]): AsyncPluggin<I, O> {
     return (input: I) => {
-      const executeTopPlugin = (plugins: AsyncPlugin<any, any>[], input: any): Promise<O> => {
+      const executeTopPlugin = (plugins: AsyncPluggin<any, any>[], input: any): Promise<O> => {
         if (!plugins.length) {
           return Promise.resolve(input as O);
         }

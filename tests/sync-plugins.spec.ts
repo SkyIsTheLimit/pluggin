@@ -1,4 +1,4 @@
-import { Plugin, ClassPlugin, execute, series, parallel } from '../src';
+import { Pluggin, ClassPluggin, execute, series, parallel } from '../src';
 
 describe('Plugin Operations', () => {
   describe('Plugins without side-effects', () => {
@@ -64,9 +64,9 @@ describe('Plugin Operations', () => {
       resultString?: string;
     }
 
-    let doubler: ClassPlugin<MathInput, void>;
-    let finish: Plugin<MathInput, void>;
-    let report: ClassPlugin<MathInput, void>;
+    let doubler: ClassPluggin<MathInput, void>;
+    let finish: Pluggin<MathInput, void>;
+    let report: ClassPluggin<MathInput, void>;
 
     interface ParallelProcessing {
       result1?: string;
@@ -75,10 +75,10 @@ describe('Plugin Operations', () => {
       output?: string;
     }
 
-    let result1: Plugin<void, ParallelProcessing>;
-    let result2: Plugin<void, ParallelProcessing>;
-    let result3: Plugin<void, ParallelProcessing>;
-    let output: Plugin<ParallelProcessing, string>;
+    let result1: Pluggin<void, ParallelProcessing>;
+    let result2: Pluggin<void, ParallelProcessing>;
+    let result3: Pluggin<void, ParallelProcessing>;
+    let output: Pluggin<ParallelProcessing, string>;
 
     beforeEach(() => {
       doubler = {

@@ -1,4 +1,4 @@
-import { AsyncPlugin, AsyncClassPlugin, executeAsync, seriesAsync, parallelAsync } from '../src';
+import { AsyncPluggin, AsyncClassPluggin, executeAsync, seriesAsync, parallelAsync } from '../src';
 
 describe('Plugin Operations', () => {
   describe('Plugins without side-effects', () => {
@@ -64,9 +64,9 @@ describe('Plugin Operations', () => {
       resultString?: string;
     }
 
-    let doubler: AsyncClassPlugin<MathInput, void>;
-    let finish: AsyncPlugin<MathInput, void>;
-    let report: AsyncClassPlugin<MathInput, void>;
+    let doubler: AsyncClassPluggin<MathInput, void>;
+    let finish: AsyncPluggin<MathInput, void>;
+    let report: AsyncClassPluggin<MathInput, void>;
 
     interface ParallelProcessing {
       result1?: string;
@@ -75,10 +75,10 @@ describe('Plugin Operations', () => {
       output?: string;
     }
 
-    let result1: AsyncPlugin<void, ParallelProcessing>;
-    let result2: AsyncPlugin<void, ParallelProcessing>;
-    let result3: AsyncPlugin<void, ParallelProcessing>;
-    let output: AsyncPlugin<ParallelProcessing, string>;
+    let result1: AsyncPluggin<void, ParallelProcessing>;
+    let result2: AsyncPluggin<void, ParallelProcessing>;
+    let result3: AsyncPluggin<void, ParallelProcessing>;
+    let output: AsyncPluggin<ParallelProcessing, string>;
 
     beforeEach(() => {
       doubler = {

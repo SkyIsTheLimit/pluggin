@@ -9,18 +9,18 @@
  *
  * The AsyncPlugin represents a plugin that needs to perform an async task during its execution.
  */
-export type AsyncPlugin<Input, Output> = AsyncClassPlugin<Input, Output> | AsyncFunctionPlugin<Input, Output>;
+export type AsyncPluggin<Input, Output> = AsyncClassPluggin<Input, Output> | AsyncFunctionPluggin<Input, Output>;
 
 /**
  * A function plugin is a unary function which takes in a single input and returns a
  * single output.
  */
-export type AsyncFunctionPlugin<Input, Output> = (input: Input) => Promise<Output>;
+export type AsyncFunctionPluggin<Input, Output> = (input: Input) => Promise<Output>;
 
 /**
  * A class type plugin is a class which implements an execute method
  */
-export type AsyncClassPlugin<Input, Output> = {
+export type AsyncClassPluggin<Input, Output> = {
   /**
    * The execute method of a plugin is responsible for either transforming the input that is
    * passed to it or returning an extracted value from the input.

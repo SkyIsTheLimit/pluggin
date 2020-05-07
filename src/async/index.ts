@@ -1,16 +1,16 @@
-import { AsyncPlugin, AsyncFunctionPlugin, AsyncClassPlugin } from './plugin/index';
+import { AsyncPluggin, AsyncFunctionPluggin, AsyncClassPluggin } from './plugin/index';
 import { series } from './operations/series';
 import { parallel } from './operations/parallel';
 import { execute } from './operations/execute';
-import { isAsyncClassPlugin, isAsyncFunctionPlugin } from './plugin/type-guards';
+import { isAsyncClassPluggin, isAsyncFunctionPluggin } from './plugin/type-guards';
 
 export {
-  AsyncPlugin,
-  AsyncFunctionPlugin,
-  AsyncClassPlugin,
+  AsyncPluggin,
+  AsyncFunctionPluggin,
+  AsyncClassPluggin,
   series as seriesAsync,
   parallel as parallelAsync,
   execute as executeAsync,
-  isAsyncClassPlugin,
-  isAsyncFunctionPlugin,
+  isAsyncClassPluggin,
+  isAsyncFunctionPluggin,
 };

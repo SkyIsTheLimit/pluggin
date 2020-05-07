@@ -1,4 +1,4 @@
-import { AsyncPlugin } from './../plugin/index';
+import { AsyncPluggin } from './../plugin/index';
 import { execute } from './execute';
 /**
  * Function to combine plugins in parallel. This function executes the plugins independently and merges the output of all the plugins.
@@ -6,7 +6,7 @@ import { execute } from './execute';
  *
  * @param plugins The plugins to combine in parallel.
  */
-export function parallel<I, O>(...plugins: AsyncPlugin<I, O>[]): AsyncPlugin<I, O> {
+export function parallel<I, O>(...plugins: AsyncPluggin<I, O>[]): AsyncPluggin<I, O> {
   return (input: I): Promise<O> =>
     new Promise((resolve) => {
       Promise.all(plugins.map((plugin) => execute(plugin, input))).then((values: O[]) => {

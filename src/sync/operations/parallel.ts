@@ -1,4 +1,4 @@
-import { Plugin } from './../plugin/index';
+import { Pluggin } from './../plugin/index';
 import { execute } from './execute';
 /**
  * Function to combine plugins in parallel. This function executes the plugins independently and merges the output of all the plugins.
@@ -6,7 +6,7 @@ import { execute } from './execute';
  *
  * @param plugins The plugins to combine in parallel.
  */
-export function parallel<I, O>(...plugins: Plugin<I, O>[]): Plugin<I, O> {
+export function parallel<I, O>(...plugins: Pluggin<I, O>[]): Pluggin<I, O> {
   return ((input: I) =>
     plugins
       .map((plugin) => execute(plugin, input))
@@ -16,5 +16,5 @@ export function parallel<I, O>(...plugins: Plugin<I, O>[]): Plugin<I, O> {
           ...(curr || ({} as O)),
         }),
         {} as O,
-      )) as Plugin<I, O>;
+      )) as Pluggin<I, O>;
 }
