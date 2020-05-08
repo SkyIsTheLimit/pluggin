@@ -18,8 +18,101 @@ export function series<I, A, B, C, D, O>(
   plugin2: Pluggin<A, B>,
   plugin3: Pluggin<B, C>,
   plugin4: Pluggin<C, D>,
+  plugin5: Pluggin<D, O>,
+): Pluggin<I, O>;
+export function series<I, A, B, C, D, E, O>(
+  plugin1: Pluggin<I, A>,
+  plugin2: Pluggin<A, B>,
+  plugin3: Pluggin<B, C>,
+  plugin4: Pluggin<C, D>,
+  plugin5: Pluggin<D, E>,
+  plugin6: Pluggin<E, O>,
+): Pluggin<I, O>;
+export function series<I, A, B, C, D, E, F, O>(
+  plugin1: Pluggin<I, A>,
+  plugin2: Pluggin<A, B>,
+  plugin3: Pluggin<B, C>,
+  plugin4: Pluggin<C, D>,
+  plugin5: Pluggin<D, E>,
+  plugin6: Pluggin<E, F>,
+  plugin7: Pluggin<F, O>,
+): Pluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, O>(
+  plugin1: Pluggin<I, A>,
+  plugin2: Pluggin<A, B>,
+  plugin3: Pluggin<B, C>,
+  plugin4: Pluggin<C, D>,
+  plugin5: Pluggin<D, E>,
+  plugin6: Pluggin<E, F>,
+  plugin7: Pluggin<F, G>,
+  plugin8: Pluggin<G, O>,
+): Pluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, H, O>(
+  plugin1: Pluggin<I, A>,
+  plugin2: Pluggin<A, B>,
+  plugin3: Pluggin<B, C>,
+  plugin4: Pluggin<C, D>,
+  plugin5: Pluggin<D, E>,
+  plugin6: Pluggin<E, F>,
+  plugin7: Pluggin<F, G>,
+  plugin8: Pluggin<G, H>,
+  plugin9: Pluggin<H, O>,
+): Pluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, H, J, O>(
+  plugin1: Pluggin<I, A>,
+  plugin2: Pluggin<A, B>,
+  plugin3: Pluggin<B, C>,
+  plugin4: Pluggin<C, D>,
+  plugin5: Pluggin<D, E>,
+  plugin6: Pluggin<E, F>,
+  plugin7: Pluggin<F, G>,
+  plugin8: Pluggin<G, H>,
+  plugin9: Pluggin<H, J>,
+  plugin10: Pluggin<J, O>,
+): Pluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, H, J, K, O>(
+  plugin1: Pluggin<I, A>,
+  plugin2: Pluggin<A, B>,
+  plugin3: Pluggin<B, C>,
+  plugin4: Pluggin<C, D>,
+  plugin5: Pluggin<D, E>,
+  plugin6: Pluggin<E, F>,
+  plugin7: Pluggin<F, G>,
+  plugin8: Pluggin<G, H>,
+  plugin9: Pluggin<H, J>,
+  plugin10: Pluggin<J, K>,
+  plugin11: Pluggin<K, O>,
+): Pluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, H, J, K, L, O>(
+  plugin1: Pluggin<I, A>,
+  plugin2: Pluggin<A, B>,
+  plugin3: Pluggin<B, C>,
+  plugin4: Pluggin<C, D>,
+  plugin5: Pluggin<D, E>,
+  plugin6: Pluggin<E, F>,
+  plugin7: Pluggin<F, G>,
+  plugin8: Pluggin<G, H>,
+  plugin9: Pluggin<H, J>,
+  plugin10: Pluggin<J, K>,
+  plugin11: Pluggin<K, L>,
+  plugin12: Pluggin<L, O>,
+): Pluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, H, J, K, L, O>(
+  plugin1: Pluggin<I, A>,
+  plugin2: Pluggin<A, B>,
+  plugin3: Pluggin<B, C>,
+  plugin4: Pluggin<C, D>,
+  plugin5: Pluggin<D, E>,
+  plugin6: Pluggin<E, F>,
+  plugin7: Pluggin<F, G>,
+  plugin8: Pluggin<G, H>,
+  plugin9: Pluggin<H, J>,
+  plugin10: Pluggin<J, K>,
+  plugin11: Pluggin<K, L>,
+  plugin12: Pluggin<L, O>,
   ...plugins: Pluggin<unknown, unknown>[]
 ): Pluggin<I, unknown>;
+/* prettier-enable */
 
 /**
  * Function to combine plugins in series. This function will chain the plugins passed to it which means the type of the output of

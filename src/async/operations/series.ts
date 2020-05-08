@@ -18,6 +18,98 @@ export function series<I, A, B, C, D, O>(
   plugin2: AsyncPluggin<A, B>,
   plugin3: AsyncPluggin<B, C>,
   plugin4: AsyncPluggin<C, D>,
+  plugin5: AsyncPluggin<D, O>,
+): AsyncPluggin<I, O>;
+export function series<I, A, B, C, D, E, O>(
+  plugin1: AsyncPluggin<I, A>,
+  plugin2: AsyncPluggin<A, B>,
+  plugin3: AsyncPluggin<B, C>,
+  plugin4: AsyncPluggin<C, D>,
+  plugin5: AsyncPluggin<D, E>,
+  plugin6: AsyncPluggin<E, O>,
+): AsyncPluggin<I, O>;
+export function series<I, A, B, C, D, E, F, O>(
+  plugin1: AsyncPluggin<I, A>,
+  plugin2: AsyncPluggin<A, B>,
+  plugin3: AsyncPluggin<B, C>,
+  plugin4: AsyncPluggin<C, D>,
+  plugin5: AsyncPluggin<D, E>,
+  plugin6: AsyncPluggin<E, F>,
+  plugin7: AsyncPluggin<F, O>,
+): AsyncPluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, O>(
+  plugin1: AsyncPluggin<I, A>,
+  plugin2: AsyncPluggin<A, B>,
+  plugin3: AsyncPluggin<B, C>,
+  plugin4: AsyncPluggin<C, D>,
+  plugin5: AsyncPluggin<D, E>,
+  plugin6: AsyncPluggin<E, F>,
+  plugin7: AsyncPluggin<F, G>,
+  plugin8: AsyncPluggin<G, O>,
+): AsyncPluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, H, O>(
+  plugin1: AsyncPluggin<I, A>,
+  plugin2: AsyncPluggin<A, B>,
+  plugin3: AsyncPluggin<B, C>,
+  plugin4: AsyncPluggin<C, D>,
+  plugin5: AsyncPluggin<D, E>,
+  plugin6: AsyncPluggin<E, F>,
+  plugin7: AsyncPluggin<F, G>,
+  plugin8: AsyncPluggin<G, H>,
+  plugin9: AsyncPluggin<H, O>,
+): AsyncPluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, H, J, O>(
+  plugin1: AsyncPluggin<I, A>,
+  plugin2: AsyncPluggin<A, B>,
+  plugin3: AsyncPluggin<B, C>,
+  plugin4: AsyncPluggin<C, D>,
+  plugin5: AsyncPluggin<D, E>,
+  plugin6: AsyncPluggin<E, F>,
+  plugin7: AsyncPluggin<F, G>,
+  plugin8: AsyncPluggin<G, H>,
+  plugin9: AsyncPluggin<H, J>,
+  plugin10: AsyncPluggin<J, O>,
+): AsyncPluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, H, J, K, O>(
+  plugin1: AsyncPluggin<I, A>,
+  plugin2: AsyncPluggin<A, B>,
+  plugin3: AsyncPluggin<B, C>,
+  plugin4: AsyncPluggin<C, D>,
+  plugin5: AsyncPluggin<D, E>,
+  plugin6: AsyncPluggin<E, F>,
+  plugin7: AsyncPluggin<F, G>,
+  plugin8: AsyncPluggin<G, H>,
+  plugin9: AsyncPluggin<H, J>,
+  plugin10: AsyncPluggin<J, K>,
+  plugin11: AsyncPluggin<K, O>,
+): AsyncPluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, H, J, K, L, O>(
+  plugin1: AsyncPluggin<I, A>,
+  plugin2: AsyncPluggin<A, B>,
+  plugin3: AsyncPluggin<B, C>,
+  plugin4: AsyncPluggin<C, D>,
+  plugin5: AsyncPluggin<D, E>,
+  plugin6: AsyncPluggin<E, F>,
+  plugin7: AsyncPluggin<F, G>,
+  plugin8: AsyncPluggin<G, H>,
+  plugin9: AsyncPluggin<H, J>,
+  plugin10: AsyncPluggin<J, K>,
+  plugin11: AsyncPluggin<K, L>,
+  plugin12: AsyncPluggin<L, O>,
+): AsyncPluggin<I, O>;
+export function series<I, A, B, C, D, E, F, G, H, J, K, L, O>(
+  plugin1: AsyncPluggin<I, A>,
+  plugin2: AsyncPluggin<A, B>,
+  plugin3: AsyncPluggin<B, C>,
+  plugin4: AsyncPluggin<C, D>,
+  plugin5: AsyncPluggin<D, E>,
+  plugin6: AsyncPluggin<E, F>,
+  plugin7: AsyncPluggin<F, G>,
+  plugin8: AsyncPluggin<G, H>,
+  plugin9: AsyncPluggin<H, J>,
+  plugin10: AsyncPluggin<J, K>,
+  plugin11: AsyncPluggin<K, L>,
+  plugin12: AsyncPluggin<L, O>,
   ...plugins: AsyncPluggin<unknown, unknown>[]
 ): AsyncPluggin<I, unknown>;
 
