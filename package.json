@@ -1,6 +1,6 @@
 {
   "name": "pluggin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/umd/index.js",
   "types": "dist/@types/index.d.ts",
   "esnext": "dist/esm/index.js",
